@@ -59,6 +59,6 @@ function checkscrollside() {
     let boxs = document.querySelectorAll(".box");
     let lastBoxH = boxs[boxs.length-1].offsetTop + Math.floor(boxs[boxs.length-1].offsetHeight/2);
     let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    let documentH = document.documentElement.clientHeight;
+    let documentH = document.documentElement.clientHeight || document.body.clientHeight;
     return (lastBoxH < scrollTop+documentH) ? true : false;
 }
